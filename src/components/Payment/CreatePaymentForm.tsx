@@ -237,7 +237,7 @@ function PaymentCreationForm(props: Props) {
         autoFocus={process.env.PLATFORM !== "ios"}
         margin="normal"
         value={formValues.destination}
-        onChange={event => setFormValue("destination", event.target.value)}
+        onChange={event => setFormValue("destination", event.target.value.trim())}
         inputProps={{
           style: { textOverflow: "ellipsis" }
         }}
