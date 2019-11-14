@@ -233,13 +233,27 @@ const theme = createMuiTheme({
       }
     },
     MuiMenu: {
+      paper: {
+        [breakpoints.down(600)]: {
+          visibility: "hidden"
+        }
+      },
       list: {
-        padding: 0
+        padding: 0,
+        [breakpoints.down(600)]: {
+          position: "fixed",
+          left: 0,
+          bottom: 0,
+          visibility: "visible"
+        }
       }
     } as any,
     MuiMenuItem: {
       root: {
-        borderBottom: "none"
+        borderBottom: "none",
+        [breakpoints.down(600)]: {
+          fontSize: 24
+        }
       }
     },
     MuiPaper: {
